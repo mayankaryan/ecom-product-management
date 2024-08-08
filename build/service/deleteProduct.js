@@ -11,13 +11,13 @@ function deleteProduct(restaurant) {
     const index = __1.product.findIndex(obj => obj.name == restaurant);
     if (index !== -1) {
         let prompt = (0, prompt_sync_1.default)();
-        console.log("Restaurant: " + __1.product[index].name + " " + __1.product[index].id + " will be deleted!! ");
+        console.log("Restaurant: " + __1.product[index].name + ", ID: " + __1.product[index].id + ", will be deleted!! ");
         let deleteConformation = prompt("please confirm (yes/no): ");
         deleteConformation.toLowerCase;
-        console.log("-------" + deleteConformation);
+        // console.log("-------" deleteConformation);
         if (deleteConformation === "y" || deleteConformation === "ye" || deleteConformation === "yes") {
             __1.product.splice(index, 1);
         }
     }
-    (0, displayProduct_1.displayProduct)();
+    (0, displayProduct_1.displayAllProduct)();
 }

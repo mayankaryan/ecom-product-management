@@ -4,3 +4,5 @@ Typescript-
 Set-3:
 Search the product from the list and after the display, delete the record from the list
  
+exception handling
+logger except console.log

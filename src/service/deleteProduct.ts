@@ -1,13 +1,13 @@
 import { product } from "..";
 import promptSync from 'prompt-sync';
-import { displayProduct } from "./displayProduct";
+import { displayAllProduct } from "./displayProduct";
 
 export function deleteProduct(restaurant:string) {  
 
     const index = product.findIndex(obj => obj.name == restaurant);
     if (index !== -1) {
         let prompt = promptSync();
-        console.log("Restaurant: " + product[index].name + " " +product[index].id + " will be deleted!! ");
+        console.log("Restaurant: " + product[index].name + ", ID: " +product[index].id + ", will be deleted!! ");
         let deleteConformation = prompt("please confirm (yes/no): ");
         
         deleteConformation.toLowerCase;
@@ -17,5 +17,5 @@ export function deleteProduct(restaurant:string) {
         }
     }
 
-    displayProduct();
+    displayAllProduct();
 }

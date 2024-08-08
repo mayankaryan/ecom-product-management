@@ -1,6 +1,6 @@
 import promptSync from 'prompt-sync';
 import { Product } from './model/product';
-import { displayProduct } from './service/displayProduct';
+import { displayAllProduct } from './service/displayProduct';
 import { searchProduct } from './service/searchProduct';
 
 export let product: Product[] = [];
@@ -34,7 +34,7 @@ let product8 = new Product('IDC',8,4,"good");
 product.push(product8);
 
 if(choise == '1'){
-    displayProduct();
+    displayAllProduct();
     searchProduct();
 }
 else if(choise == '2'){

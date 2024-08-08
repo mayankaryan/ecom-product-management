@@ -33,7 +33,7 @@ exports.product.push(product7);
 let product8 = new product_1.Product('IDC', 8, 4, "good");
 exports.product.push(product8);
 if (choise == '1') {
-    (0, displayProduct_1.displayProduct)();
+    (0, displayProduct_1.displayAllProduct)();
     (0, searchProduct_1.searchProduct)();
 }
 else if (choise == '2') {
