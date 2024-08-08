@@ -7,15 +7,13 @@ export function deleteProduct(restaurant:string) {
     const index = product.findIndex(obj => obj.name == restaurant);
     if (index !== -1) {
         let prompt = promptSync();
-        let deleteConformation = prompt("Restaurant: " + product[index].name + " " +product[index].id + " will be deleted!! please confirm\n(yes/no): ")
-
+        console.log("Restaurant: " + product[index].name + " " +product[index].id + " will be deleted!! ");
+        let deleteConformation = prompt("please confirm (yes/no): ");
+        
         deleteConformation.toLowerCase;
-        console.log("-------" + deleteConformation);
-        if(deleteConformation === "y" || deleteConformation === "yes" || deleteConformation === "yes"){
+        // console.log("-------" deleteConformation);
+        if(deleteConformation === "y" || deleteConformation === "ye" || deleteConformation === "yes"){
             product.splice(index, 1);
-        }
-        else {
-            
         }
     }
 
