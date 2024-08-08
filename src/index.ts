@@ -2,10 +2,11 @@ import promptSync from 'prompt-sync';
 import { Product } from './model/product';
 import { displayAllProduct } from './service/displayProduct';
 import { searchProduct } from './service/searchProduct';
+import { logger } from './logger/logger';
 
 export let product: Product[] = [];
-
-console.log("welcome to our E-com website...");
+logger.info('welcome to our E-com website...');
+// console.log("welcome to our E-com website...");
 
 let prompt = promptSync();
 const name = prompt('Please enter your name? ');
